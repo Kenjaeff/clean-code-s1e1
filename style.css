@@ -1,5 +1,5 @@
 /* Basic Style */
-body {
+.main {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
@@ -13,17 +13,13 @@ body {
 .matrix-photo img {
   width: 100%;
 }
-.matrix-photo 
-.more-inf {
-  font-family: fantasy, cursive;
-}
 
 @media (max-width: 768px) {
   .matrix-photo {
     text-align: center;
   }
 }
-.main {
+.main-tasks {
   display: block;
   width: 500px;
   margin: 0 auto 0;
@@ -36,12 +32,16 @@ body {
 .task-input {
   display: flex;
 }
+.hidden {
+  display: none;
+}
 ul {
   margin: 0;
   padding: 0px;
 }
 li,
-h3 {
+h1,
+h2 {
   list-style: none;
 }
 input,
@@ -63,7 +63,8 @@ button:hover {
 
 /* Heading */
 
-h3,
+h1,
+h2,
 label[for="new-task"] {
   color: #333;
   font-weight: 700;
@@ -91,16 +92,20 @@ input[type="text"]:focus {
 
 /* New Task */
 
+h1,
 label[for="new-task"] {
   display: block;
   margin: 0 0 20px;
 }
-input#new-task {
+#new-task {
   width: 318px;
 }
 
 /* Task list */
 
+.todo {
+  margin-bottom: 0px;
+}
 li {
   overflow: hidden;
   padding: 20px 0;
@@ -124,21 +129,18 @@ li > label {
 li > input[type="text"] {
   width: 226px;
 }
-button.delete 
-img {
+.delete img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-button.delete 
-img:hover {
+.delete img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
 
-ul#completed-tasks 
-label {
+#completed-tasks label {
   text-decoration: line-through;
   color: #888;
 }
@@ -148,10 +150,10 @@ label {
 ul li input[type="text"] {
   display: none;
 }
-ul li.edit-mode input[type="text"] {
+.edit-mode input[type="text"] {
   display: inline-block;
   width: 224px;
 }
-ul li.edit-mode label {
+.edit-mode label {
   display: none;
 }
